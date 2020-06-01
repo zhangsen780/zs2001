@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="referrer" content="never">
+    <link rel="stylesheet" href="../css/purpose.css">
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="../css/list.css">
+    <link rel="stylesheet" href="../jquery-pagination/pagination.css">
+    <title>商品列表</title>
+</head>
+
+<body>
+    <!-- header -->
+    <header id="header" class="container-fluid">
+        <div class="header-loginbar container-fluid">
+            <div class="header-logo"><a href="index.html">converse</a></div>
+            <div class="header-loginbar">
+                <a name="headlog" href="" class="a">登录/</a><a href="" name="headreg" class="a">注册</a>
+
+
+                <span name="back">退出</span>
+                <a href="" id="buyCar">购物车</a><span>购物车</span>
+                <span>聊天</span><span>搜索</span><span>帮助</span>
+                <p id="yidenglu"></p>
+            </div>
+        </div>
+
+        <div id="login" class="container-fluid">
+            <div class="login-sty container-fluid">
+                <div class="reg-l">
+                    <h2>还未注册？</h2>
+                    <p>注册账户</p>
+                </div>
+
+                <div class="cut-off"></div>
+                <div class="login-r">
+                    <h2>已成为会员？</h2>
+                    <div class="input-box">
+                        <input type="text" id="logUser" placeholder="用户名">
+                        <p></p>
+                    </div>
+                    <div class="input-box">
+                        <input type="password" id="logPass" placeholder="密码">
+                        <p></p>
+                    </div>
+                    <div class="input-box-vc">
+                        <input type="text" id="logVc" placeholder="验证码">
+                        <span id="codeSpan"></span>
+                        <p></p>
+                    </div>
+                    <div class="logbut" id="logbut">登录</div>
+
+                </div>
+            </div>
+        </div>
+        <!-- 注册div -->
+
+        <div class="reg" class="container-fluid">
+            <div class="reg-sty container">
+                <div class="reg-1">
+                    <div class="reginp-box">
+                        <h3>注册用户名*</h3>
+                        <input type="text" name="regname" id="regUser" placeholder="请输入用户名">
+                        <p></p>
+                    </div>
+                    <div class="reginp-box">
+                        <h3>密码*</h3>
+                        <input type="password" id="regPass1" placeholder="请输入密码">
+                        <p></p>
+                    </div>
+                    <div class="reginp-box">
+                        <h3>确认密码*</h3>
+                        <input type="password" id="regPass2" placeholder="请再输入一次密码">
+                        <p></p>
+                    </div>
+                </div>
+
+                <div class="reg-2">
+
+                    <div class="reg-sex">
+                        <h3>性别</h3>
+                        <div class="inpsty">
+                            男 <input type="radio" name="sex" value="男" checked>
+                            女 <input type="radio" name="sex" value="女">
+                        </div>
+
+                        <p>请输入性别</p>
+                    </div>
+                    <div class="reg-vc">
+                        <h3>验证码*</h3>
+                        <input type="text" name="regvc" id="" placeholder="验证码">
+                        <span>验证码</span>
+                        <p>验证码提示信息</p>
+                    </div>
+                    <div class="reg-but">注册</div>
+                </div>
+
+            </div>
+        </div>
+
+    </header>
+
+    <!-- -------------------------------------------------- -->
+    <!-- 隐藏的登录注册 -->
+
+    <!-- ------------------------------------------------ -->
+    <!-- 导航 -->
+    <nav id="nav" class="container-fluid">
+        <ul class="nav container">
+            <li><a href="./list.html?cat_one_id=食品酒水">男的</a></li>
+            <li><a href="./list.html?cat_one_id=童装玩具">女的</a></li>
+            <li><a href="./list.html?cat_one_id=电脑办公">儿童</a></li>
+            <li><a href="./list.html?cat_one_id=珠宝首饰">店铺分部</a></li>
+            <li><a href="./list.html?cat_one_id=热门推荐">优惠专区</a></li>
+        </ul>
+    </nav>
+
+    <!--  导航菜单 -->
+    <div id="menu" class="container-fluid"></div>
+
+    <div id="list-main" class="container">
+        <div class="title-list">
+            <span>男的</span>/<span>121件商品</span>
+        </div>
+        <div class="list-content clear">
+            <div class="menu-left l">
+                <div class="shaixuan-top">
+                    <p>筛选</p>
+
+                </div>
+                <div class="menu-js">
+                    <dl>
+                        <dt>系列</dt>
+                        <dd>CHUCK 70</dd>
+                        <dd>ONE STAR</dd>
+                        <dd>Jack Purcell</dd>
+                        <dd>Chuck Taylor All Star</dd>
+                        <dd>CONS</dd>
+                        <dd>PRO LEATHER</dd>
+
+                    </dl>
+                    <dl>
+                        <dt>季节</dt>
+                        <dd>春季</dd>
+                        <dd>夏季</dd>
+                        <dd>秋季</dd>
+
+                    </dl>
+                    <dl>
+                        <dt>儿童</dt>
+                        <dd>儿童</dd>
+
+                    </dl>
+                    <dl>
+                        <dt>价格</dt>
+                        <dd>0-299</dd>
+                        <dd>300-399</dd>
+                        <dd>400-499</dd>
+                        <dd>500-599</dd>
+                        <dd>600-699</dd>
+                        <dd>700+</dd>
+
+                    </dl>
+                </div>
+
+
+            </div>
+            <div class="product-list r">
+                <div class="sort clear">
+                    <p class="l">排序</p>
+                    <div class="sort-product l">
+
+                        <a class="xuanzhong" href="#">默认</a>
+
+                        <a href="#">价格</a>
+                        <a href="#">最喜欢</a>
+                        <a href="#">最畅销</a>
+                    </div>
+
+                </div>
+
+                <!-- 动态 生成 -->
+                <div class="box-product clear">
+                    <!-- <dl class="l">
+                        <dt><a href="#"><img src="../imgs/列表1.png" alt=""></a></dt>
+                        <dd class="miaoshu"><a href="">款式</a></dd>
+                        <dd class="list-jiage">价格</dd>
+                    </dl>
+                 -->
+
+
+                </div>
+                <div class="M-box"></div>
+                <!--             以上为动态生成                  -->
+            </div>
+        </div>
+    </div>
+
+    <!-- 联系我们 栏目-->
+
+    <div id="column-bot" class="container">
+        <div class="column-bot-up">
+            <dl>
+                <dt><a href="#">男的</a></dt>
+                <dd><a href="#">CHUCK TAYLOR ALL STAR</a></dd>
+                <dd><a href="#">CONVERSE CONS</a></dd>
+                <dd><a href="#">JACK PURCELL</a></dd>
+                <dd class="mgb"><a href="#">CHUCK II</a></dd>
+                <dd><a href="#">踩的</a></dd>
+                <dd><a href="#">穿的</a></dd>
+                <dd><a href="#">戴的</a></dd>
+                <dd><a href="#">优惠</a></dd>
+            </dl>
+
+            <dl>
+                <dt><a href="#">女的</a></dt>
+                <dd><a href="#">CHUCK TAYLOR ALL STAR</a></dd>
+                <dd><a href="#">CONVERSE CONS</a></dd>
+                <dd><a href="#">JACK PURCELL</a></dd>
+                <dd class="mgb"><a href="#">CHUCK II</a></dd>
+                <dd><a href="#">踩的</a></dd>
+                <dd><a href="#">穿的</a></dd>
+                <dd><a href="#">戴的</a></dd>
+                <dd><a href="#">优惠</a></dd>
+            </dl>
+
+            <dl>
+                <dt><a href="#">儿童</a></dt>
+                <dd><a href="#">CHUCK TAYLOR ALL STAR</a></dd>
+                <dd class="mgb"><a href="#">CONVERSE CONS</a></dd>
+            </dl>
+
+            <dl>
+                <dt><a href="#">GLOBAL</a></dt>
+                <dd class="mgb"><a href="#">CONVERSE GLOBAL SITES</a></dd>
+            </dl>
+
+
+            <!--  down -->
+
+            <dl>
+                <dt><a href="#">我的账户</a></dt>
+                <dd><a href="#">会员中心</a></dd>
+                <dd><a href="#">现有订单</a></dd>
+                <dd><a href="#">过去订单</a></dd>
+                <dd><a href="#">退换货</a></dd>
+                <dd><a href="#">账户设置</a></dd>
+                <dd><a href="#">地址簿</a></dd>
+                <dd><a href="#">我的优惠券</a></dd>
+                <dd><a href="#">我的收藏</a></dd>
+                <dd><a href="#">我的评论</a></dd>
+
+            </dl>
+            <dl>
+                <dt><a href="#">帮助和购物指南</a></dt>
+                <dd><a href="#">账户</a></dd>
+                <dd><a href="#">订单</a></dd>
+                <dd><a href="#">尺码</a></dd>
+                <dd><a href="#">退货和退款</a></dd>
+                <dd><a href="#">换货</a></dd>
+                <dd><a href="#">配送</a></dd>
+                <dd><a href="#">联系我们</a></dd>
+                <dd><a href="#">常见问题</a></dd>
+            </dl>
+            <dl>
+                <dt><a href="#">NIKE</a></dt>
+                <dd><a href="#">NIKE+</a></dd>
+                <dd><a href="#">JORDAN</a></dd>
+            </dl>
+        </div>
+
+    </div>
+
+    <!-- footer  页尾 -->
+    <div id="footer" class="container-fluid">
+        <div class="container">
+            <div class="footer-subnav">
+                <a href="#">关于我们</a>
+                <a href="#">帮助和购物指南</a>
+                <a href="#">隐私策略</a>
+                <a href="#">使用规则</a>
+            </div>
+
+
+            <div class="footer-logo">
+                <img src="../imgs/热门/logo2.png" alt="">
+            </div>
+            <ul class="footer-guild">
+                <li>@匡威体育用品（中国）有限公司 保留所有权利</li>
+                <li><a href="#">沪ICP备11044134号-2</a></li>
+                <li><span class="beian"></span>沪公网安备 31011002001667号</li>
+                <li><span class="zhizhao"></span>电子营业执照</li>
+                <li><a href="#">公司证照</a></li>
+                <li></li>
+            </ul>
+            <div class="footer-supervise">
+                <a href="#"><img src="../imgs/热门/jiandu.png" alt=""></a>
+                <div class="jiaobiao">
+                    <p>亲爱的市民朋友，上海警方反诈劝阻电话“962110”系专门针对避免您财产被骗受损而设，请您一旦收到来电，立即接听。</p>
+                    <span></span>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <script src="../jquery-3.4.1/jquery-3.4.1.min.js"></script>
+    <script src="../jquery-pagination/jquery.pagination.js"></script>
+    <script src="../js/cookieTools.js"></script>
+    <script src="../js/tongyong.js"></script>
+    <script src="../js/reg.js"></script>
+    <script src="../js/login.js"></script>
+
+</body>
+
+</html>
+
+<script>
+
+
+
+    $(function () {
+
+
+        // 下拉菜单
+
+        $(".menu-js>dl").click(function () {
+            $(this).toggleClass("active").find("dd").slideToggle()
+            // 
+            // .slideToggle().parent().siblings().removeClass("active").find("dd").slideUp()
+        })
+
+        $(".sort-product>a").click(function () {
+            $(this).addClass("xuanzhong").siblings().removeClass("xuanzhong")
+
+        })
+
+
+
+        // 从数据库获取
+
+        // 1,获取浏览器地址栏中的参数
+        let str = decodeURIComponent(window.location.search);
+        str = str.substr(1);
+        console.log(str);
+
+        // 数组的 0索引 对应的是 键名,也就是字段名称
+        // 数组的 1索引 对应的是 数据,也就是字段数据
+        // 根据数据,进行查询操作
+        const arr = str.split('=');
+
+        console.log(arr);
+
+        getAjax(1);
+
+        function getAjax(page) {
+
+            $.ajax({
+
+                url: "../server/goods_list.php",
+                data: {
+
+                    cat_one_id: arr[1],  // 前端url地址中,分类名称数据
+                    page: page,          // 当前页数,也就是函数的参数
+                    line: 6,             // 每页显示的数据数量,根据项目需
+                },
+                type: 'get',
+                dataType: 'json',
+                success: function (res) {
+                    console.log(res);
+                    let str = '';
+
+                    res.forEach(function (item) {
+
+                        str += `
+                            <dl class="l">
+                                <dt><a href="./detail.html?goods_id=${item.goods_id}"><img src="${item.goods_small_logo}" alt=""></a></dt>
+                                <dd class="miaoshu"><a href="./detail.html?goods_id=${item.goods_id}">${item.goods_name}</a></dd>
+                                <dd class="list-jiage">￥ ${item.goods_price}</dd>
+                            </dl>
+                        
+                        `;
+
+                    })
+
+                    $('.box-product').html(str);
+
+                    $('.title-list').html()
+
+                    $('.M-box').pagination({
+                        mode: 'fixed',               // 固定显示的页面数量
+                        pageCount: res[0].sumPage,  // 总页数 
+                        totalData: res[0].row,      // 总数据数量
+                        current: res[0].page,       // 当前页数
+                        showData: 8,                // 每页数据数量
+                        activeCls: 'active',        // 点中标签的样式
+                        coping: true,                // 显示首页末页
+                        homePage: '首页',            // 首页的文字内容
+                        endPage: '末页',             // 末页的文字内容
+                        prevContent: '上页',         // 上页的文字内容
+                        nextContent: '下页',         // 下页的文字内容
+                        callback: function (result) {    // 点击的时候,触发的程序
+                            // 获取当前的页数
+                            let p = result.getCurrent();  // 获取当前点击的按钮,所表示的下一次请求的页数
+                            // 这个页数,就是下次请求的参数
+                            getAjax(p);                   // 点击时,再次发送ajax请求,参数是点击的按钮,表示的页数
+                        }
+                    });
+
+                }
+
+            })
+        }
+    })
+</script>

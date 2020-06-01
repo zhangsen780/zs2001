@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="referrer" content="never">
+    <link rel="stylesheet" href="../css/purpose.css">
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="../css/detail.css">
+    <title>商品详情</title>
+
+</head>
+
+<body>
+    <header id="header" class="container-fluid">
+        <div class="header-loginbar container-fluid">
+            <div class="header-logo"><a href="index.html">converse</a></div>
+            <div class="header-loginbar">
+                <a name="headlog" href="#" class="a">登录/</a><a href="#" name="headreg" class="a">注册</a>
+
+
+                <span name="back">退出</span>
+                <a href="#" id="buyCar">购物车</a><span>购物车</span>
+                <span>聊天</span><span>搜索</span><span>帮助</span>
+                <p id="yidenglu"></p>
+            </div>
+        </div>
+
+        <div id="login" class="container-fluid">
+            <div class="login-sty container-fluid">
+                <div class="reg-l">
+                    <h2>还未注册？</h2>
+                    <p>注册账户</p>
+                </div>
+
+                <div class="cut-off"></div>
+                <div class="login-r">
+                    <h2>已成为会员？</h2>
+                    <div class="input-box">
+                        <input type="text" id="logUser" placeholder="用户名">
+                        <p></p>
+                    </div>
+                    <div class="input-box">
+                        <input type="password" id="logPass" placeholder="密码">
+                        <p></p>
+                    </div>
+                    <div class="input-box-vc">
+                        <input type="text" id="logVc" placeholder="验证码">
+                        <span id="codeSpan"></span>
+                        <p></p>
+                    </div>
+                    <div class="logbut" id="logbut">登录</div>
+
+                </div>
+            </div>
+        </div>
+        <!-- 注册div -->
+
+        <div class="reg" class="container-fluid">
+            <div class="reg-sty container">
+                <div class="reg-1">
+                    <div class="reginp-box">
+                        <h3>注册用户名*</h3>
+                        <input type="text" name="regname" id="regUser" placeholder="请输入用户名">
+                        <p></p>
+                    </div>
+                    <div class="reginp-box">
+                        <h3>密码*</h3>
+                        <input type="password" id="regPass1" placeholder="请输入密码">
+                        <p></p>
+                    </div>
+                    <div class="reginp-box">
+                        <h3>确认密码*</h3>
+                        <input type="password" id="regPass2" placeholder="请再输入一次密码">
+                        <p></p>
+                    </div>
+                </div>
+
+                <div class="reg-2">
+
+                    <div class="reg-sex">
+                        <h3>性别</h3>
+                        <div class="inpsty">
+                            男 <input type="radio" name="sex" value="男" checked>
+                            女 <input type="radio" name="sex" value="女">
+                        </div>
+
+                        <p>请输入性别</p>
+                    </div>
+                    <div class="reg-vc">
+                        <h3>验证码*</h3>
+                        <input type="text" name="regvc" id="" placeholder="验证码">
+                        <span>验证码</span>
+                        <p>验证码提示信息</p>
+                    </div>
+                    <div class="reg-but">注册</div>
+                </div>
+
+            </div>
+        </div>
+
+    </header>
+
+    <!-- -------------------------------------------------- -->
+    <!-- 隐藏的登录注册 -->
+
+    <!-- ------------------------------------------------ -->
+    <!-- 导航 -->
+    <nav id="nav" class="container-fluid">
+        <ul class="nav container">
+            <li><a href="./list.html?cat_one_id=食品酒水">男的</a></li>
+            <li><a href="./list.html?cat_one_id=童装玩具">女的</a></li>
+            <li><a href="./list.html?cat_one_id=电脑办公">儿童</a></li>
+            <li><a href="./list.html?cat_one_id=珠宝首饰">店铺分部</a></li>
+            <li><a href="./list.html?cat_one_id=热门推荐">优惠专区</a></li>
+        </ul>
+    </nav>
+
+    <!-- 详情页 -->
+    <div id="main-detail" class="container clear">
+        <div class="shop">
+            <div class="share">
+                <i></i><a href="#">分享</a>
+            </div>
+            <div class="collect">
+                <i></i><a href="#">加入收藏(00)</a>
+            </div>
+            <div class="comment">
+                <i></i><a href="#">评论该商品</a>
+            </div>
+        </div>
+        <!-- 放大镜 -->
+        <!-- <div class="magnifying l"> -->
+        <!-- <div class="headline-com">
+                <h2>【男女同款】Chuck 70 中性</h2>
+                <p>价格<span>￥539.00</span></p>
+            </div>
+
+            <div class="magnifying-1">
+                <div class="datu">
+                    <img class="aciv" src="../imgs/fdj1.png" alt="">
+
+                    <div class="zhegai"></div>
+                </div>
+
+                <ul class="suoluetu">
+                    <li class="aciv-1"><img src="../imgs/fdj-01.png" alt=""></li>
+                    <li><img src="../imgs/fdj-02.png" alt=""></li>
+                    <li><img src="../imgs/fdj-03.png" alt=""></li>
+                    <li><img src="../imgs/fdj-04.png" alt=""></li>
+                    <li><img src="../imgs/fdj-05.png" alt=""></li>
+                    <li><img src="../imgs/fdj-06.png" alt=""></li>
+                </ul>   -->
+        <!-- <div class="hidden-fdj" style="background: url() no-repeat 100% 100%;"></div> 
+            </div> -->
+
+        <!-- 详情说明 -->
+
+        <!-- <div class="description">
+
+                <h3>价格说明（此说明仅当出现价格比较时有效）</h3>
+                <p>划线价格：划线的价格可能是商品的专柜吊牌价或正品零售价指导价或该商品的曾经展示过的销售价等，仅供您参考。</p>
+                <p>未划线价格：未划线的价格是商品在官网上的销售标价，具体的成交价格可能因为会员使用优惠券发生变化，最终以订单结算页价格为准。</p>
+
+                <div class="tiaozhuanbut"><a href="">分类</a></div>
+            </div> -->
+        <!-- </div> -->
+
+        <!-- 右侧栏 -->
+        <!-- <div class="size-commodity r">
+            <div class="t-img">
+                <a href=""><img src="../imgs/fdj-01.png" alt=""></a>
+                <span> 色 : 米白色</span><br>
+                <span> 型号 : 167750C281</span>
+                <h3>> 尺码对照表</h3>
+            </div>
+            <div class="shopping">
+                <h3>尺码换算器</h3>
+                <div class="size-box clear">
+                    <h4 class="l">请输入您的尺码</h4>
+                    <div class="size-select r">
+                        <span>请选择尺码</span>
+                        <select name="" id="">
+
+                            <option value="">请选择尺码</option>
+                            <option value="">23</option>
+                            <option value="">23</option>
+                            <option value="">23</option>
+                            <option value="">23</option>
+                            <option value="">23</option>
+                            <option value="">23</option>
+                            <option value="">23</option>
+                        </select>
+                    </div>
+
+                </div>
+
+
+                <div class="size-box clear">
+                    <h4 class="l">数量</h4>
+                    <div class="size-select r">
+                        <span>1</span>
+                        <select name="" id="">
+
+                            <option value="">1</option>
+                            <option value="">2</option>
+                            <option value="">3</option>
+                            <option value="">4</option>
+                            <option value="">5</option>
+                        </select>
+                    </div>
+
+                </div>
+
+            </div>
+            购物车按钮
+            <div class="but-class">
+                <a href="#" class="buy-btn"><span>立即购买</span></a>
+                <a href="#" class="now-btn"><span>添加到购物车</span></a>
+            </div> 
+
+        </div> -->
+    </div>
+
+    <!-- 详情 -->
+    <div id="xiangqing" class="container">
+
+    </div>
+    <!-- 尺码表 -->
+
+    <div id="beijing-x">
+        <div class="chimabiao">
+            <h2>尺码对照表 </h2>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>美国码(中性/男性)</td>
+                        <td>3</td>
+                        <td>3.5</td>
+                        <td>4</td>
+                        <td>4.5</td>
+                        <td>5</td>
+                        <td>5.5</td>
+                        <td>6</td>
+                        <td>6.5</td>
+                        <td>7</td>
+                        <td>7.5</td>
+                        <td>8</td>
+                        <td>8.5</td>
+                        <td>9</td>
+                        <td>9.5</td>
+                        <td>10</td>
+                        <td>10.5</td>
+                        <td>11</td>
+                        <td>11.5</td>
+
+                    </tr>
+                    <tr>
+                        <td>美国码 女性</td>
+                        <td>5</td>
+                        <td>5.5</td>
+                        <td>6</td>
+                        <td>6.5</td>
+                        <td>7</td>
+                        <td>7.5</td>
+                        <td>8</td>
+                        <td>8.5</td>
+                        <td>9</td>
+                        <td>9.5</td>
+                        <td>10</td>
+                        <td>10.5</td>
+                        <td>11</td>
+                        <td>11.5</td>
+                        <td>12</td>
+                        <td>12.5</td>
+                        <td>13</td>
+                        <td>13.5</td>
+                    </tr>
+                    <tr>
+                        <td>中国码</td>
+                        <td>35</td>
+                        <td>36</td>
+                        <td>36.5</td>
+                        <td>37</td>
+                        <td>37.5</td>
+                        <td>38</td>
+                        <td>39</td>
+                        <td>39.5</td>
+                        <td>40</td>
+                        <td>41</td>
+                        <td>41.5</td>
+                        <td>42</td>
+                        <td>42.5</td>
+                        <td>43</td>
+                        <td>44</td>
+                        <td>44.5</td>
+                        <td>45</td>
+                        <td>46</td>
+                    </tr>
+                    <tr>
+                        <td>厘米</td>
+                        <td>22</td>
+                        <td>22.5</td>
+                        <td>23</td>
+                        <td>23.5</td>
+                        <td>24</td>
+                        <td>24.5</td>
+                        <td>24.5</td>
+                        <td>25</td>
+                        <td>25.5</td>
+                        <td>26</td>
+                        <td>26.5</td>
+                        <td>27</td>
+                        <td>27.5</td>
+                        <td>28</td>
+                        <td>28.5</td>
+                        <td>29</td>
+                        <td>29.5</td>
+                        <td>30</td>
+
+                    </tr>
+                </tbody>
+
+            </table>
+
+            <p>注：实物尺寸因商品不同而略有差异，以上数据仅供参考，以收到实物为准。</p>
+            <div class="fanhuibut">确定</div>
+        </div>
+
+    </div>
+
+
+
+
+    <!-- 联系我们 栏目-->
+    <div id="column-bot" class="container">
+        <div class="column-bot-up">
+            <dl>
+                <dt><a href="#">男的</a></dt>
+                <dd><a href="#">CHUCK TAYLOR ALL STAR</a></dd>
+                <dd><a href="#">CONVERSE CONS</a></dd>
+                <dd><a href="#">JACK PURCELL</a></dd>
+                <dd class="mgb"><a href="#">CHUCK II</a></dd>
+                <dd><a href="#">踩的</a></dd>
+                <dd><a href="#">穿的</a></dd>
+                <dd><a href="#">戴的</a></dd>
+                <dd><a href="#">优惠</a></dd>
+            </dl>
+
+            <dl>
+                <dt><a href="#">女的</a></dt>
+                <dd><a href="#">CHUCK TAYLOR ALL STAR</a></dd>
+                <dd><a href="#">CONVERSE CONS</a></dd>
+                <dd><a href="#">JACK PURCELL</a></dd>
+                <dd class="mgb"><a href="#">CHUCK II</a></dd>
+                <dd><a href="#">踩的</a></dd>
+                <dd><a href="#">穿的</a></dd>
+                <dd><a href="#">戴的</a></dd>
+                <dd><a href="#">优惠</a></dd>
+            </dl>
+
+            <dl>
+                <dt><a href="#">儿童</a></dt>
+                <dd><a href="#">CHUCK TAYLOR ALL STAR</a></dd>
+                <dd class="mgb"><a href="#">CONVERSE CONS</a></dd>
+            </dl>
+
+            <dl>
+                <dt><a href="#">GLOBAL</a></dt>
+                <dd class="mgb"><a href="#">CONVERSE GLOBAL SITES</a></dd>
+            </dl>
+
+
+            <!--  down -->
+
+            <dl>
+                <dt><a href="#">我的账户</a></dt>
+                <dd><a href="#">会员中心</a></dd>
+                <dd><a href="#">现有订单</a></dd>
+                <dd><a href="#">过去订单</a></dd>
+                <dd><a href="#">退换货</a></dd>
+                <dd><a href="#">账户设置</a></dd>
+                <dd><a href="#">地址簿</a></dd>
+                <dd><a href="#">我的优惠券</a></dd>
+                <dd><a href="#">我的收藏</a></dd>
+                <dd><a href="#">我的评论</a></dd>
+
+            </dl>
+            <dl>
+                <dt><a href="#">帮助和购物指南</a></dt>
+                <dd><a href="#">账户</a></dd>
+                <dd><a href="#">订单</a></dd>
+                <dd><a href="#">尺码</a></dd>
+                <dd><a href="#">退货和退款</a></dd>
+                <dd><a href="#">换货</a></dd>
+                <dd><a href="#">配送</a></dd>
+                <dd><a href="#">联系我们</a></dd>
+                <dd><a href="#">常见问题</a></dd>
+            </dl>
+            <dl>
+                <dt><a href="#">NIKE</a></dt>
+                <dd><a href="#">NIKE+</a></dd>
+                <dd><a href="#">JORDAN</a></dd>
+            </dl>
+        </div>
+
+    </div>
+
+
+    <!-- footer  页尾 -->
+    <div id="footer" class="container-fluid">
+        <div class="container">
+            <div class="footer-subnav">
+                <a href="#">关于我们</a>
+                <a href="#">帮助和购物指南</a>
+                <a href="#">隐私策略</a>
+                <a href="#">使用规则</a>
+            </div>
+
+
+            <div class="footer-logo">
+                <img src="../imgs/热门/logo2.png" alt="">
+            </div>
+            <ul class="footer-guild">
+                <li>@匡威体育用品（中国）有限公司 保留所有权利</li>
+                <li><a href="#">沪ICP备11044134号-2</a></li>
+                <li><span class="beian"></span>沪公网安备 31011002001667号</li>
+                <li><span class="zhizhao"></span>电子营业执照</li>
+                <li><a href="#">公司证照</a></li>
+                <li></li>
+            </ul>
+            <div class="footer-supervise">
+                <a href="#"><img src="../imgs/热门/jiandu.png" alt=""></a>
+                <div class="jiaobiao">
+                    <p>亲爱的市民朋友，上海警方反诈劝阻电话“962110”系专门针对避免您财产被骗受损而设，请您一旦收到来电，立即接听。</p>
+                    <span></span>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+    <script src="../jquery-3.4.1/jquery-3.4.1.min.js"></script>
+    <script src="../js/cookieTools.js"></script>
+    <script src="../js/tongyong.js"></script>
+    <script src="../js/reg.js"></script>
+    <script src="../js/login.js"></script>
+
+    <script>
+
+
+        $(function () {
+
+
+
+            // 定义一个变量,来存储 ajax的请求结果
+            // 方便在其他函数数据中使用
+
+            let result = [];
+
+            let str = decodeURIComponent(window.location.search.substr(1))
+
+            console.log(str);
+
+            const arr = str.split('=');
+            console.log(arr);
+
+            $.ajax({
+                type: 'post',
+                url: '../server/goods_detail.php',
+                data: { goods_id: arr[1] },
+                dataType: 'json',
+
+                success: function (res) {
+                    console.log(res);
+                    result = res;
+
+                    let str = "";
+
+                    str = `
+
+
+
+            <div class="shop">
+                <div class="share">
+                    <i></i><a href="#">分享</a>
+                </div>
+                <div class="collect">
+                    <i></i><a href="#">加入收藏(00)</a>
+                </div>
+            <div class="comment">
+                <i></i><a href="#">评论该商品</a>
+            </div>
+        </div>
+            <div class="magnifying l">
+                <div class="headline-com">
+                    <h2>${res.goods_name}</h2>
+                    <p>价格<span>￥${res.goods_price}</span></p>
+                </div>
+
+                <div class="magnifying-1">
+                    <div class="datu">
+                        <img class="aciv" src="${res.goods_big_logo}" alt="">
+
+                        <div class="zhegai" style="top:0; width:115px; height:280px; display: none;"></div>
+                    </div>
+
+                    <ul class="suoluetu">
+                        <li class="aciv-1"><img src="${res.goods_small_logo}" alt=""></li>
+                    
+                    </ul>
+                    <div class="hidden-fdj" style="background: url(${res.goods_big_logo}) no-repeat 0 0; display: none;"></div> 
+                </div>
+            </div>  
+        </div>
+        <div class="size-commodity r">
+            <div class="t-img">
+                <a href=""><img src="${res.goods_small_logo}" alt=""></a>
+                <span>${res.cat_id}</span><br>
+                <span> 型号 : 167750C281</span>
+                <h3>> 尺码对照表</h3>
+            </div>
+            <div class="shopping">
+                <h3>尺码换算器</h3>
+                <div class="size-box clear">
+                    <h4 class="l">请输入您的尺码</h4>
+                    <div class="size-select r">
+                        <span>请选择尺码</span>
+                        <select name="" id="">
+
+                            <option value="">请选择尺码</option>
+                            <option value="">23</option>
+                            <option value="">23</option>
+                            <option value="">23</option>
+                            <option value="">23</option>
+                            <option value="">23</option>
+                            <option value="">23</option>
+                            <option value="">23</option>
+                        </select>
+                    </div>
+
+                </div>
+
+
+                <div class="size-box clear">
+                    <h4 class="l">数量</h4>
+                    <div class="size-select r">
+                        <span>1</span>
+                        <select name="" id="">
+
+                            <option value="">1</option>
+                            <option value="">2</option>
+                            <option value="">3</option>
+                            <option value="">4</option>
+                            <option value="">5</option>
+                        </select>
+                    </div>
+
+                </div>
+
+            </div>
+            <!-- 购物车按钮 -->
+            <div class="but-class">
+                <a href="./cart.html" class="buy-btn"><span>立即购买</span></a>
+                <a href="./cart.html" class="now-btn"><span>添加到购物车</span></a>
+            </div>
+
+        </div>
+
+                    `;
+
+
+                    $("#main-detail").html(str);
+
+
+
+                    let str1 = "";
+
+                    str1 = `
+                    <div class="xiangqing">
+
+                        ${res.goods_introduce}
+                    </div>
+                    
+
+                    `;
+
+                    $('#xiangqing').html(str1);
+
+                }
+            });
+
+
+            // 尺码对照表显示隐藏
+
+            $(".size-commodity .t-img h3").click(function () {
+                $("#beijing-x").css({ "display": "block" })
+            })
+
+            $("#beijing-x .chimabiao .fanhuibut").click(function () {
+                $("#beijing-x").css({ "display": "none" })
+            });
+
+            $(".size-commodity").on('click', ".now-btn", function () {
+
+                if (getCookie("username") === null) {
+                    window.confirm('请您先登录');
+                } else if (getCookie("username") !== null) {
+                    window.location.href = '../pages/cart.html';
+
+                    if (localStorage.getItem('cart') === null) {
+
+                        result.num = 1;     // 购买数量信息,第一次默认是1
+                        result.buy = true   // 默认当前商品是购买状态
+                        var arr = [];
+                        // 将对象写入空数组,作为第一条数据信息
+                        // 也就是购物车中的第一条信息
+                        arr.push(result);
+
+                    } else {
+                        let bool = true;
+
+                        var arr = JSON.parse(localStorage.getItem('cart'));
+                        arr.forEach(function (item) {
+
+                            if (item.goods_id === result.goods_id) {
+
+                                item.num++;
+                                // 给变量赋值false,表示购物车中,有当前商品
+                                bool = false;
+                            }
+                        })
+
+                        // 循环结束
+                        // 如果 bool仍然是 true 证明 购物车中没有当前商品,要新增当前商品
+                        // 如果 bool是false 证明 购物车中有当期商品,已经增加够买数量,不用再操作了
+                        if (bool === true) {
+                            result.buy = true;
+                            result.num = 1;
+                            arr.push(result);   // 在最后新增数据
+                            //arr.unshift(result);   // 在起始新增数据
+                        }
+                    }
+
+                    localStorage.setItem('cart' , JSON.stringify(arr) );
+
+                }
+            });
+
+
+        })
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="referrer" content="never">
+
+    <link rel="stylesheet" href="../css/cart.css">
+    <link rel="stylesheet" href="../css/purpose.css">
+    <title>购物车</title>
+</head>
+
+<body>
+    <header id="header" class="container-fluid">
+        <div class="header-loginbar container-fluid">
+            <div class="header-logo"><a href="index.html">converse</a></div>
+            <div class="header-loginbar">
+
+                <a href="" id="buyCar">购物车</a><span>购物车</span>
+                <span>聊天</span><span>搜索</span><span>帮助</span>
+            </div>
+        </div>
+
+    </header>
+
+
+    <div id="cart-box" class="container">
+
+        <p class="tishi">
+            尊敬的顾客您好，我们店铺是不会泄露您的消费信息的，请放心。另外我们也不会要求获取、收集、使用任何与消费者金融消费类（如：信用卡）信息，如果接到以上信息电话，是属于诈骗电话，请勿相信，以防钱财损失。如您对订单有疑问，请联系在线客服。
+        </p>
+        <div class="Orderdetail">
+            <h2>订单信息</h2>
+            <div class="checkbox">
+                <button name="all">全选</button>
+                <button name="no">不选</button>
+                <button name="not">反选</button>
+            </div>
+            <ul class="dd-jiesuan">
+                <!-- <li>
+                    <div class="aa">
+                        <input type="checkbox">
+                        <a href="./detail.html"><img src="../imgs/fdj-01.png" alt=""></a>
+                        <h3>描述描述描手机卡考虑时间氨基酸卡死了开始快速拉升看卢萨卡卢萨卡</h3>
+                    </div>
+
+                    <p>价格<span>*1</span></p>
+                    <div class="amount">
+                        <span>-</span><span class="shuspan">1</span><span>+</span>
+                    </div>
+                    <button class="del-but">删除商品</button>
+                </li> -->
+
+                <!-- <-- <li>
+                    <div class="aa">
+                        <input type="checkbox">
+                        <a href="./detail.html"><img src="../imgs/fdj-01.png" alt=""></a>
+                        <h3>描述描述描手机卡考虑时间氨基酸卡死了开始快速拉升看卢萨卡卢萨卡</h3>
+                    </div>
+
+                    <p>价格<span>*1</span></p>
+                    <div class="amount">
+                        <span>-</span><span class="shuspan">1</span><span>+</span>
+                    </div>
+
+                </li> -->
+            </ul>
+            <div class="jiesuan-box">
+                <!-- <h3>您购买了3种商品，共计19件。需要支付1000元</h3> -->
+
+            </div>
+
+            <div class="tijiao-but">确认支付</div>
+        </div>
+
+
+    </div>
+
+
+
+
+
+
+
+
+
+    <!-- 尾部 -->
+
+    <div id="footer" class="container-fluid">
+        <div class="container">
+            <div class="footer-subnav">
+                <a href="#">关于我们</a>
+                <a href="#">帮助和购物指南</a>
+                <a href="#">隐私策略</a>
+                <a href="#">使用规则</a>
+            </div>
+
+
+            <div class="footer-logo">
+                <img src="../imgs/热门/logo2.png" alt="">
+            </div>
+            <ul class="footer-guild">
+                <li>@匡威体育用品（中国）有限公司 保留所有权利</li>
+                <li><a href="#">沪ICP备11044134号-2</a></li>
+                <li><span class="beian"></span>沪公网安备 31011002001667号</li>
+                <li><span class="zhizhao"></span>电子营业执照</li>
+                <li><a href="#">公司证照</a></li>
+                <li></li>
+            </ul>
+            <div class="footer-supervise">
+                <a href="#"><img src="../imgs/热门/jiandu.png" alt=""></a>
+                <div class="jiaobiao">
+                    <p>亲爱的市民朋友，上海警方反诈劝阻电话“962110”系专门针对避免您财产被骗受损而设，请您一旦收到来电，立即接听。</p>
+                    <span></span>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
+
+<script src="../jquery-3.4.1/jquery-3.4.1.min.js"></script>
+
+<script src="../js/tongyong.js"></script>
+
+<script>
+
+
+    // 1,获取 localStorage 中的数据信息
+    const cateArr = JSON.parse(localStorage.getItem('cart'));
+
+    console.log(cateArr);
+
+    setPage(cateArr);
+
+    function setPage(array) {
+        // 定义变量来存储数据,定义在函数中
+        let NUM = 0;
+        let TYPE = 0;
+        let PAY = 0;
+
+        let str = '';
+        array.forEach(function (item) {
+
+            str = `
+            
+            <li>
+                <div class="aa">
+                    <input type="checkbox" name="checked" goods_id="${item.goods_id}" ${item.buy === true ? 'checked' : ''}>
+                    <a href="./detail.html"><img src="${item.goods_small_logo}" alt=""></a>
+                    <h3>${item.goods_name}</h3>
+                </div>
+
+                <p>￥ <span>${item.goods_price}</span></p>
+                <div class="amount">
+                    <span name="lost" goods_id="${item.goods_id}" ${item.num == 1 ? 'disabled' : ''}>-</span><span class="shuspan" disabled>${item.num}</span><span name="odd" goods_id="${item.goods_id}" ${item.num == item.goods_number ? 'disabled' : ''}>+</span>
+                </div>
+                <button class="del-but" name="del" goods_id="${item.goods_id}">删除商品</button>
+            </li>
+            
+            `;
+
+            if (item.buy === true) {
+                TYPE++;           // 种类++
+                NUM += item.num;  // 数量是 += 累加
+                PAY += item.num * item.goods_price;   // 钱数是 数量*单价
+            }
+        })
+
+        $(".dd-jiesuan").html(str)
+
+
+        //  结算生成
+
+        let str1 = '';
+
+        str1 = ` <h3>您购买了${TYPE}种商品，共计${NUM}件。需要支付${parseInt(PAY * 100) / 100}元</h3> `;
+        $('.jiesuan-box').html(str1);
+
+
+    };
+
+    const oDiv = document.querySelector('.Orderdetail');
+
+
+    oDiv.addEventListener('click', function (e) {
+        // 点击的是全选标签
+        if (e.target.getAttribute('name') === 'all') {
+            // 给数组中的所有数据,buy属性都设定为true
+            cateArr.forEach(function (item) {
+                item.buy = true;
+            })
+        };
+
+
+        // 点击的是不选标签
+        if (e.target.getAttribute('name') === 'no') {
+            // 给数组中的所有数据,buy属性都设定为false
+            cateArr.forEach(function (item) {
+                item.buy = false;
+            })
+        }
+
+
+        // 点击的是反选标签
+        if (e.target.getAttribute('name') === 'not') {
+            // 给数组中的所有数据,buy属性都设定为原始数值取反
+            cateArr.forEach(function (item) {
+                item.buy = !(item.buy);
+            })
+        }
+
+
+        if (e.target.getAttribute('name') === 'checked') {
+            // 获取 goods_id 的属性
+            let goods_id = e.target.getAttribute('goods_id');
+            cateArr.forEach(function (item) {
+                // 如果当前item的goods_id 与 标签中存储的goods_id相同
+                if (item.goods_id === goods_id) {
+                    // 设定 数据 的 购买数据,是复选框当前的数据
+                    item.buy = $(e.target).prop('checked');
+                }
+            })
+
+        };
+
+
+        if (e.target.getAttribute('name') === 'del') {
+            // 获取 goods_id 的属性
+            let goods_id = e.target.getAttribute('goods_id');
+            cateArr.forEach(function (item, key) {
+                // 如果当前item的goods_id 与 标签中存储的goods_id相同
+                if (item.goods_id === goods_id) {
+                    // 从当前的索引下标开始,删除数组中的一个数据单元
+                    cateArr.splice(key, 1);
+                }
+            })
+        };
+
+
+        if (e.target.getAttribute('name') === 'odd') {
+            // 获取 goods_id 的属性
+            let goods_id = e.target.getAttribute('goods_id');
+            cateArr.forEach(function (item, key) {
+                // 如果当前item的goods_id 与 标签中存储的goods_id相同
+                if (item.goods_id === goods_id) {
+                    // 购买数量++
+                    item.num++;
+                }
+            })
+        };
+
+        setPage(cateArr);
+      // 把新数组的数据,写入到 localStorage 中
+      localStorage.setItem('cart' , JSON.stringify(cateArr) );
+
+
+
+    })
+
+
+
+
+
+
+
+    // // 通过事件委托,给动态生成的内容,添加点击事件
+    // // 如果只是少量标签,使用jQuery事件委托更简单
+    // // 如果是大量事件委托,用js的语法更简单
+
+    // const oDiv = document.querySelector('.container');
+
+    // oDiv.addEventListener('click', function (e) {
+    //     // 点击的是全选标签
+    //     if (e.target.getAttribute('name') === 'all') {
+    //         // 给数组中的所有数据,buy属性都设定为true
+    //         cateArr.forEach(function (item) {
+    //             item.buy = true;
+    //         })
+    //     }
+
+    //     // 点击的是不选标签
+    //     if (e.target.getAttribute('name') === 'no') {
+    //         // 给数组中的所有数据,buy属性都设定为false
+    //         cateArr.forEach(function (item) {
+    //             item.buy = false;
+    //         })
+    //     }
+
+    //     // 点击的是反选标签
+    //     if (e.target.getAttribute('name') === 'not') {
+    //         // 给数组中的所有数据,buy属性都设定为原始数值取反
+    //         cateArr.forEach(function (item) {
+    //             item.buy = !(item.buy);
+    //         })
+    //     }
+
+    //     if (e.target.getAttribute('name') === 'checked') {
+    //         // 获取 goods_id 的属性
+    //         let goods_id = e.target.getAttribute('goods_id');
+    //         cateArr.forEach(function (item) {
+    //             // 如果当前item的goods_id 与 标签中存储的goods_id相同
+    //             if (item.goods_id === goods_id) {
+    //                 // 设定 数据 的 购买数据,是复选框当前的数据
+    //                 item.buy = $(e.target).prop('checked');
+    //             }
+    //         })
+
+    //     }
+
+    //     // 我不要了 按钮
+    //     if (e.target.getAttribute('name') === 'del') {
+    //         // 获取 goods_id 的属性
+    //         let goods_id = e.target.getAttribute('goods_id');
+    //         cateArr.forEach(function (item, key) {
+    //             // 如果当前item的goods_id 与 标签中存储的goods_id相同
+    //             if (item.goods_id === goods_id) {
+    //                 // 从当前的索引下标开始,删除数组中的一个数据单元
+    //                 cateArr.splice(key, 1);
+    //             }
+    //         })
+    //     }
+
+    //     // 添加 按钮
+    //     if (e.target.getAttribute('name') === 'odd') {
+    //         // 获取 goods_id 的属性
+    //         let goods_id = e.target.getAttribute('goods_id');
+    //         cateArr.forEach(function (item, key) {
+    //             // 如果当前item的goods_id 与 标签中存储的goods_id相同
+    //             if (item.goods_id === goods_id) {
+    //                 // 购买数量++
+    //                 item.num++;
+    //             }
+    //         })
+    //     }
+
+    //     // 减少 按钮
+    //     if (e.target.getAttribute('name') === 'lost') {
+    //         // 获取 goods_id 的属性
+    //         let goods_id = e.target.getAttribute('goods_id');
+    //         cateArr.forEach(function (item, key) {
+    //             // 如果当前item的goods_id 与 标签中存储的goods_id相同
+    //             if (item.goods_id === goods_id) {
+    //                 // 购买数量--
+    //                 item.num--;
+    //             }
+    //         })
+    //     }
+
+    //     // 不管上面那个一个事件触发了,总会改变数组中的数据
+
+    //     // 将新的数组,写入到页面中
+    //     setPage(cateArr);
+    //     // 把新数组的数据,写入到 localStorage 中
+    //     localStorage.setItem('cart', JSON.stringify(cateArr));
+    // })
+
+</script>

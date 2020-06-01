@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../css/index.css">
+    <link rel="stylesheet" type="text/css" href="../css/purpose.css">
+    <title>首页</title>
+    <style>
+      
+    </style>
+
+</head>
+
+<body>
+    <!-- header -->
+    <header id="header" class="container-fluid">
+        <div class="header-loginbar container-fluid">
+            <div class="header-logo"><a href="index.html">converse</a></div>
+            <div class="header-loginbar">
+                
+                    <a name="headlog" href="#" class="a">登录/</a><a href="#" name="headreg" class="a">注册</a>
+
+                
+                <span name="back">退出</span>
+                <a href="#" id="buyCar">购物车</a><span>购物车</span>
+                <span>聊天</span><span>搜索</span><span>帮助</span>
+                <p id="yidenglu"></p>
+            </div>
+        </div>
+
+        <div id="login" class="container-fluid">
+            <div class="login-sty container-fluid">
+                <div class="reg-l">
+                    <h2>还未注册？</h2>
+                    <p>注册账户</p>
+                </div>
+
+                <div class="cut-off"></div>
+                <div class="login-r">
+                    <h2>已成为会员？</h2>
+                    <div class="input-box">
+                        <input type="text" id="logUser" name="logUser" placeholder="用户名">
+
+                        <p></p>
+                    </div>
+                    <div class="input-box">
+                        <input type="password" id="logPass" placeholder="密码">
+                        <p></p>
+                    </div>
+                    <div class="input-box-vc">
+                        <input type="text" id="logVc" placeholder="验证码">
+                        <span id="codeSpan"></span>
+                        <p></p>
+                    </div>
+                    <div class="logbut" id="logbut">登录</div>
+
+                </div>
+            </div>
+        </div>
+        <!-- 注册div -->
+
+        <div class="reg" class="container-fluid">
+            <div class="reg-sty container">
+                <div class="reg-1">
+                    <div class="reginp-box">
+                        <h3>注册用户名*</h3>
+                        <input type="text" name="regname" id="regUser" placeholder="请输入用户名">
+                        <p></p>
+                    </div>
+                    <div class="reginp-box">
+                        <h3>密码*</h3>
+                        <input type="password" id="regPass1" placeholder="请输入密码">
+                        <p></p>
+                    </div>
+                    <div class="reginp-box">
+                        <h3>确认密码*</h3>
+                        <input type="password" id="regPass2" placeholder="请再输入一次密码">
+                        <p></p>
+                    </div>
+                </div>
+
+                <div class="reg-2">
+
+                    <div class="reg-sex">
+                        <h3>性别</h3>
+                        <div class="inpsty">
+                            男 <input type="radio" name="sex" value="男">
+                            女 <input type="radio" name="sex" value="女">
+                        </div>
+
+                        <p></p>
+                    </div>
+                    <div class="reg-vc">
+                        <h3>验证码*</h3>
+                        <input type="text" name="" id="regvc1" placeholder="验证码">
+                        <span id="regvc2">验证码</span>
+                        <p></p>
+                    </div>
+                    <div class="reg-but">注册</div>
+                </div>
+
+            </div>
+        </div>
+
+    </header>
+
+    <!-- -------------------------------------------------- -->
+    <!-- 隐藏的登录注册 -->
+
+    <!-- ------------------------------------------------ -->
+    <!-- 导航 -->
+    <nav id="nav" class="container-fluid">
+        <ul class="nav container">
+            <li><a href="./list.html?cat_one_id=食品酒水">男的</a></li>
+            <li><a href="./list.html?cat_one_id=童装玩具">女的</a></li>
+            <li><a href="./list.html?cat_one_id=电脑办公">儿童</a></li>
+            <li><a href="./list.html?cat_one_id=珠宝首饰">店铺分部</a></li>
+            <li><a href="./list.html?cat_one_id=热门推荐">优惠专区</a></li>
+        </ul>
+    </nav>
+
+    <!--  导航菜单 -->
+    <div id="menu" class="container-fluid"></div>
+
+    <!-- 广告轮播图 -->
+
+    <div id="banner" class="container-fluid ">
+        <ul class="slide">
+            <li><img src="../imgs/01.png" alt="" style="opacity: 1;"></li>
+            <li><img src="../imgs/02.jpg" alt=""></li>
+            <li><img src="../imgs/03.jpg" alt=""></li>
+            <li><img src="../imgs/04.jpg" alt=""></li>
+            <li><img src="../imgs/05.jpg" alt=""></li>
+            <li><img src="../imgs/06.jpg" alt=""></li>
+        </ul>
+        <!--  焦点 -->
+        <ol class="slide-focujpg">
+            <li class="select" index="0">ROKIT</li>
+            <li index="1">CHUCK TAYLOR ALL STAR</li>
+            <li index="2">EARTH TONE SUEDE</li>
+            <li index="3">RENEW</li>
+            <li index="4">JACK PURCELL</li>
+            <li index="5">TEE</li>
+        </ol>
+
+        <!-- 切换 -->
+        <div class="slide-focus">
+            <a href="JavaScript:;" name="lr">&lt;</a>
+            <a href="JavaScript:;" name="lr">&gt;</a>
+        </div>
+    </div>
+
+    <!-- 商品列表 -->
+    <!-- 热卖分类 -->
+    <div id="commodity-hot" class="container">
+        <h2 class="title-hot">热卖商品</h2>
+        <!-- 热卖菜单 -->
+        <div class="menu-hot clear">
+            <a href="list.html">
+
+                <p class="select">男的踩的</p>
+                <img src="../imgs/热门/01.jpg" alt="">
+
+            </a>
+            <a href="list.html">
+
+                <p>女的踩的</p>
+                <img src="../imgs/热门/02.jpg" alt="">
+
+            </a>
+            <a href="list.html">
+
+                <p>穿的</p>
+                <img src="../imgs/热门/03.jpg" alt="">
+
+            </a>
+            <a href="list.html">
+
+                <p>戴的</p>
+                <img src="../imgs/热门/04.jpg" alt="">
+
+            </a>
+            <div class="jiantou"></div>
+        </div>
+
+        <!-- 详细商品 热门对应 -->
+
+        <div class="submenu-hot">
+            <div class="submenu-hot-1">
+                <a href="detail.html">
+                    <img src="../imgs/热门/详情1.png" alt="">
+                    <p>【男女同款】Chuck 70 E260</p>
+                    <span>¥799.00</span>
+                </a>
+                <a href="detail.html">
+                    <img src="../imgs/热门/详情2.png" alt="">
+                    <p>【男女同款】One Star Academy Ox</p>
+                    <span>¥639.00</span>
+                </a>
+                <a href="detail.html">
+                    <img src="../imgs/热门/详情3.png" alt="">
+                    <p>【男女同款】Pro Leather Ox</p>
+                    <span>¥639.00</span>
+                </a>
+                <a href="detail.html">
+                    <img src="../imgs/热门/详情4.png" alt="">
+                    <p>【男女同款】Pro Leather Ox</p>
+                    <span>¥639.00</span>
+                </a>
+            </div>
+            <hr>
+            <div class="submenu-hot-1">
+                <a href="detail.html">
+                    <img src="../imgs/热门/详情1.png" alt="">
+                    <p>【男女同款】Chuck 70 E260</p>
+                    <span>¥799.00</span>
+                </a>
+                <a href="detail.html">
+                    <img src="../imgs/热门/详情2.png" alt="">
+                    <p>【男女同款】One Star Academy Ox</p>
+                    <span>¥639.00</span>
+                </a>
+                <a href="detail.html">
+                    <img src="../imgs/热门/详情3.png" alt="">
+                    <p>【男女同款】Pro Leather Ox</p>
+                    <span>¥639.00</span>
+                </a>
+                <a href="detail.html">
+                    <img src="../imgs/热门/详情4.png" alt="">
+                    <p>【男女同款】Pro Leather Ox</p>
+                    <span>¥639.00</span>
+                </a>
+            </div>
+
+            <div class="hot-joinus">
+                点击查看所有最新的商品
+            </div>
+        </div>
+
+    </div>
+    <!-- 其他商品 -->
+    <div id="commodity-hot" class="container">
+        <h2 class="title-hot">新品推荐</h2>
+        <!-- 热卖菜单 -->
+        <div class="menu-hot clear">
+
+            <!-- 详细商品 热门对应 -->
+
+            <div class="submenu-hot">
+                <div class="submenu-hot-1">
+                    <a href="detail.html">
+                        <img src="../imgs/热门/详情1.png" alt="">
+                        <p>【男女同款】Chuck 70 E260</p>
+                        <span>¥799.00</span>
+                    </a>
+                    <a href="detail.html">
+                        <img src="../imgs/热门/详情2.png" alt="">
+                        <p>【男女同款】One Star Academy Ox</p>
+                        <span>¥639.00</span>
+                    </a>
+                    <a href="detail.html">
+                        <img src="../imgs/热门/详情3.png" alt="">
+                        <p>【男女同款】Pro Leather Ox</p>
+                        <span>¥639.00</span>
+                    </a>
+                    <a href="detail.html">
+                        <img src="../imgs/热门/详情4.png" alt="">
+                        <p>【男女同款】Pro Leather Ox</p>
+                        <span>¥639.00</span>
+                    </a>
+                </div>
+                <hr>
+                <div class="submenu-hot-1">
+                    <a href="detail.html">
+                        <img src="../imgs/热门/详情1.png" alt="">
+                        <p>【男女同款】Chuck 70 E260</p>
+                        <span>¥799.00</span>
+                    </a>
+                    <a href="detail.html">
+                        <img src="../imgs/热门/详情2.png" alt="">
+                        <p>【男女同款】One Star Academy Ox</p>
+                        <span>¥639.00</span>
+                    </a>
+                    <a href="detail.html">
+                        <img src="../imgs/热门/详情3.png" alt="">
+                        <p>【男女同款】Pro Leather Ox</p>
+                        <span>¥639.00</span>
+                    </a>
+                    <a href="detail.html">
+                        <img src="../imgs/热门/详情4.png" alt="">
+                        <p>【男女同款】Pro Leather Ox</p>
+                        <span>¥639.00</span>
+                    </a>
+                </div>
+                <hr>
+                <div class="submenu-hot-1">
+                    <a href="detail.html">
+                        <img src="../imgs/热门/详情1.png" alt="">
+                        <p>【男女同款】Chuck 70 E260</p>
+                        <span>¥799.00</span>
+                    </a>
+                    <a href="detail.html">
+                        <img src="../imgs/热门/详情2.png" alt="">
+                        <p>【男女同款】One Star Academy Ox</p>
+                        <span>¥639.00</span>
+                    </a>
+                    <a href="detail.html">
+                        <img src="../imgs/热门/详情3.png" alt="">
+                        <p>【男女同款】Pro Leather Ox</p>
+                        <span>¥639.00</span>
+                    </a>
+                    <a href="detail.html">
+                        <img src="../imgs/热门/详情4.png" alt="">
+                        <p>【男女同款】Pro Leather Ox</p>
+                        <span>¥639.00</span>
+                    </a>
+                </div>
+                <hr>
+                <div class="submenu-hot-1">
+                    <a href="detail.html">
+                        <img src="../imgs/热门/详情1.png" alt="">
+                        <p>【男女同款】Chuck 70 E260</p>
+                        <span>¥799.00</span>
+                    </a>
+                    <a href="detail.html">
+                        <img src="../imgs/热门/详情2.png" alt="">
+                        <p>【男女同款】One Star Academy Ox</p>
+                        <span>¥639.00</span>
+                    </a>
+                    <a href="detail.html">
+                        <img src="../imgs/热门/详情3.png" alt="">
+                        <p>【男女同款】Pro Leather Ox</p>
+                        <span>¥639.00</span>
+                    </a>
+                    <a href="detail.html">
+                        <img src="../imgs/热门/详情4.png" alt="">
+                        <p>【男女同款】Pro Leather Ox</p>
+                        <span>¥639.00</span>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+    <!--功能区   流行分类    -->
+    <div id="fashion" class="container-fluid">
+
+        <div class="fashion-one container clear">
+            <p>街头先行</p>
+            <div class="fashion-one-1 clear">
+                <div class="l">
+                    <img src="../imgs/热门/one-1.jpg" alt="">
+                    <div class="zhegai"></div>
+                    <h3>BRAND LOGO TEE</h3>
+                    <span>查看更多</span>
+                </div>
+                <div class="r">
+                    <img src="../imgs/热门/one-2.jpg" alt="">
+                    <div class="zhegai"></div>
+                    <h3>夏日小白鞋完全指南</h3>
+                    <span>查看更多</span>
+                </div>
+            </div>
+
+        </div>
+        <!-- 类型分类 -->
+        <div class="fashion-two container">
+            <p>至酷精选 玩转潮流</p>
+            <div class="fashion-two-1">
+                <div class="fashion-two-2">
+                    <img src="../imgs/热门/two-1.jpg" alt="">
+                    <div class="zhegai"></div>
+                    <h3>KIDS</h3>
+                    <a href="#">查看更多</a>
+                </div>
+                <div class="fashion-two-2">
+                    <img src="../imgs/热门/two-2.jpg" alt="">
+                    <div class="zhegai"></div>
+                    <h3>CHUCK 70</h3>
+                    <a href="#">查看更多</a>
+                </div>
+                <div class="fashion-two-2">
+                    <img src="../imgs/热门/two-3.jpg" alt="">
+                    <div class="zhegai"></div>
+                    <h3>JACK PURCELL</h3>
+                    <a href="#">查看更多</a>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- 关注 微信 微博 -->
+        <div class="attention container-fluid">
+            <h1>关注CONVERSE</h1>
+            <p>Converse同时活跃在各类社交网络平台，点击下列你所喜爱的常用社交平台，密切关注Converse的最新产品与资讯。</p>
+            <div class="zttb">
+                <span>微信</span><span>微博</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- 联系我们 栏目-->
+
+    <div id="column-bot" class="container">
+        <div class="column-bot-up">
+            <dl>
+                <dt><a href="#">男的</a></dt>
+                <dd><a href="#">CHUCK TAYLOR ALL STAR</a></dd>
+                <dd><a href="#">CONVERSE CONS</a></dd>
+                <dd><a href="#">JACK PURCELL</a></dd>
+                <dd class="mgb"><a href="#">CHUCK II</a></dd>
+                <dd><a href="#">踩的</a></dd>
+                <dd><a href="#">穿的</a></dd>
+                <dd><a href="#">戴的</a></dd>
+                <dd><a href="#">优惠</a></dd>
+            </dl>
+
+            <dl>
+                <dt><a href="#">女的</a></dt>
+                <dd><a href="#">CHUCK TAYLOR ALL STAR</a></dd>
+                <dd><a href="#">CONVERSE CONS</a></dd>
+                <dd><a href="#">JACK PURCELL</a></dd>
+                <dd class="mgb"><a href="#">CHUCK II</a></dd>
+                <dd><a href="#">踩的</a></dd>
+                <dd><a href="#">穿的</a></dd>
+                <dd><a href="#">戴的</a></dd>
+                <dd><a href="#">优惠</a></dd>
+            </dl>
+
+            <dl>
+                <dt><a href="#">儿童</a></dt>
+                <dd><a href="#">CHUCK TAYLOR ALL STAR</a></dd>
+                <dd class="mgb"><a href="#">CONVERSE CONS</a></dd>
+            </dl>
+
+            <dl>
+                <dt><a href="#">GLOBAL</a></dt>
+                <dd class="mgb"><a href="#">CONVERSE GLOBAL SITES</a></dd>
+            </dl>
+
+
+            <!--  down -->
+
+            <dl>
+                <dt><a href="#">我的账户</a></dt>
+                <dd><a href="#">会员中心</a></dd>
+                <dd><a href="#">现有订单</a></dd>
+                <dd><a href="#">过去订单</a></dd>
+                <dd><a href="#">退换货</a></dd>
+                <dd><a href="#">账户设置</a></dd>
+                <dd><a href="#">地址簿</a></dd>
+                <dd><a href="#">我的优惠券</a></dd>
+                <dd><a href="#">我的收藏</a></dd>
+                <dd><a href="#">我的评论</a></dd>
+
+            </dl>
+            <dl>
+                <dt><a href="#">帮助和购物指南</a></dt>
+                <dd><a href="#">账户</a></dd>
+                <dd><a href="#">订单</a></dd>
+                <dd><a href="#">尺码</a></dd>
+                <dd><a href="#">退货和退款</a></dd>
+                <dd><a href="#">换货</a></dd>
+                <dd><a href="#">配送</a></dd>
+                <dd><a href="#">联系我们</a></dd>
+                <dd><a href="#">常见问题</a></dd>
+            </dl>
+            <dl>
+                <dt><a href="#">NIKE</a></dt>
+                <dd><a href="#">NIKE+</a></dd>
+                <dd><a href="#">JORDAN</a></dd>
+            </dl>
+        </div>
+
+    </div>
+
+    <!-- footer  页尾 -->
+    <div id="footer" class="container-fluid">
+        <div class="container">
+            <div class="footer-subnav">
+                <a href="#">关于我们</a>
+                <a href="#">帮助和购物指南</a>
+                <a href="#">隐私策略</a>
+                <a href="#">使用规则</a>
+            </div>
+
+
+            <div class="footer-logo">
+                <img src="../imgs/热门/logo2.png" alt="">
+            </div>
+            <ul class="footer-guild">
+                <li>@匡威体育用品（中国）有限公司 保留所有权利</li>
+                <li><a href="#">沪ICP备11044134号-2</a></li>
+                <li><span class="beian"></span>沪公网安备 31011002001667号</li>
+                <li><span class="zhizhao"></span>电子营业执照</li>
+                <li><a href="#">公司证照</a></li>
+                <li></li>
+            </ul>
+            <div class="footer-supervise">
+                <a href="#"><img src="../imgs/热门/jiandu.png" alt=""></a>
+                <div class="jiaobiao">
+                    <p>亲爱的市民朋友，上海警方反诈劝阻电话“962110”系专门针对避免您财产被骗受损而设，请您一旦收到来电，立即接听。</p>
+                    <span></span>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div id="balog"></div>
+
+</body>
+
+</html>
+
+<script src="../jquery-3.4.1/jquery-3.4.1.min.js"></script>
+<script src="../js/cookieTools.js"></script>
+<script src="../js/tongyong.js"></script>
+
+<script src="../js/reg.js"></script>
+<script src="../js/login.js"></script>
+<script src="../js/move.js"></script>
+<script src="../js/lunbotu.js"></script>
+
+
